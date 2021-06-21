@@ -6,7 +6,7 @@ defaults = {
     # Experiment Parameters        #
     ################################
     'epochs':500,
-    'iters_per_checkpoint':10000,
+    'iters_per_checkpoint':2000,
     'seed':1234,
     'dynamic_loss_scaling':True,
     'fp16_run':False,
@@ -21,8 +21,8 @@ defaults = {
     # Data Parameters             #
     ################################
     'load_mel_from_disk':False,
-    'training_files':'filelists/train_filelist.txt',
-    'validation_files':'filelists/val_filelist.txt',
+    'training_files':'content/tacotron2_mod/train.txt',
+    'validation_files':'content/tacotron2_mod/train_val.txt',
     'text_cleaners':"['korean_cleaners']",  ##한글을 사용하려면 "['korean_cleaners']"   -> str 형태로 입력해야 함
                                             ##영어를 사용하려면 "['english_cleaners']"
     ################################
