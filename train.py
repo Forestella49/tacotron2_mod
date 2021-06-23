@@ -16,8 +16,6 @@ from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
 from hparams import add_hparams, get_hparams
 
-checkpoint_path = "/content/drive/Mydrive/check_point"
-
 def reduce_tensor(tensor, n_gpus):
     rt = tensor.clone()
     dist.all_reduce(rt, op=dist.reduce_op.SUM)
